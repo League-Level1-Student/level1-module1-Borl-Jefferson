@@ -16,12 +16,13 @@ Vualt (int secret){
 	}
 
 boolean tryCode(int num) {
-	for (int i=0;i>1000000;i++) {
+	for (int i=0;i<1000000;i++) {
 		num = num + 1;
+		
 		if (num == scode) {
-	return true;
-		}
-	
+	System.out.println(num);
+	return true;	
+	}
 	}
 	return false;
 	

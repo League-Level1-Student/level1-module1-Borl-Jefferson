@@ -13,16 +13,16 @@ if (chs .equals ("random")) {
 	Random ran = new Random();
 	 fin = ran.nextInt(1000000-1+1) + 1;
 }
-
+else {
 	 fin = Integer.parseInt(chs);
-	
+}
 
 String chek = JOptionPane.showInputDialog("Do you want to see the code?");
 if (chek .equals ("yes")) {
 System.out.println(fin);
-
-Vualt v = new Vualt(fin);
-
 }
+Vualt v = new Vualt(fin);
+v.tryCode(1);
+
 }
 }

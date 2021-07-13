@@ -23,6 +23,7 @@ System.out.println(fin);
 }
 Vualt v = new Vualt(fin);
 v.tryCode(1);
-
+Jbon jj = new Jbon();
+System.out.println(jj.findCode(v));
 }
 }

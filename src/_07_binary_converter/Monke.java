@@ -1,22 +1,28 @@
 package _07_binary_converter;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Monke {
-public static void main(String[] args) {
+public class Monke implements ActionListener {
+	JTextField in = new JTextField(20);
+JLabel jell = new JLabel();
+JPanel jepp = new JPanel();
+public void run() {
 
 	JFrame jeff = new JFrame();
-	JPanel jepp = new JPanel();
+jeff.setVisible(true);
 	jeff.getContentPane().add(jepp);
 	JButton jebb = new JButton("convert");
-	JTextField in = new JTextField("00000000");
 	jepp.add(in);
 	jepp.add(jebb);
-            
+            jebb.addActionListener(this);
 
 	
 }
@@ -38,6 +44,14 @@ static String convert(String input) {
         JOptionPane.showMessageDialog(null, "Enter a binary, silly!!!");
         return "-";
     }
+}
+@Override
+public void actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	String num = in.getText();
+	String fin = convert(num);
+	jell.setText(fin);
+	jepp.add(jell);
 }	
 
 }

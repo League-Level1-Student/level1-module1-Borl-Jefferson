@@ -15,15 +15,14 @@ Vualt (int secret){
 	this.scode = secret;
 	}
 
-boolean tryCode(int num) {
-	for (int i=0;i<1000000;i++) {
-		num = num + 1;
+public boolean tryCode(int num) {
+
 		
 		if (num == scode) {
-	System.out.println(num);
+
 	return true;	
 	}
-	}
+	
 	return false;
 	
 }
